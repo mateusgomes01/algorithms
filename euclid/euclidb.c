@@ -2,17 +2,21 @@
 #include <stdlib.h>
 
 /*
-Euclids recursive algorithm to compute the greates common divisor of two integers
+Euclids non-recursive algorithm to compute the greates common divisor of two integers
 Mateus Melo
 https://mateusmelo.xyz
 */
 
 int euclid(int m, int n){
-	if( n == 0 ){
-		return m;
-	} else {
-		return euclid(n, m%n);
+	int r;
+
+	while( n != 0 ){
+		r = m % n;
+		m = n;
+		n = r;
 	}
+
+	return m;
 }
 
 int main (int argc, char *argv[]) {
