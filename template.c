@@ -1,11 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+	Algorithm description
+	Mateus Melo
+	https://mateusmelo.xyz
+*/
+
 int main (int argc, char *argv[]) {
 	FILE *file;
 	int m, n;
 
-	if( argc != 2 ) {
+	if ( argc != 2 ) {
 		printf("Usage: %s filename\n", argv[0]);
 	} else {
 		file = fopen( argv[1], "rt");
